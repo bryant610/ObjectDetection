@@ -329,7 +329,7 @@ class ViewController: UIViewController {
     
     func videoFileLocation() -> URL {
         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
-        let videoOutputUrl = URL(fileURLWithPath: documentsPath.appendingPathComponent("videoFile")).appendingPathExtension("mov")
+        let videoOutputUrl = URL(fileURLWithPath: documentsPath.appendingPathComponent("videoFile")).appendingPathExtension("mp4")
         do {
         if FileManager.default.fileExists(atPath: videoOutputUrl.path) {
             try FileManager.default.removeItem(at: videoOutputUrl)
